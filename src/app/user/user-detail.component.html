@@ -1,0 +1,10 @@
+<div *ngIf="userData">
+    <h3>User detail</h3>
+    <p>Username: {{ userData.username }}</p>
+    <p>Password: {{ userData.password | hideStr }}</p>
+    <p>Gender: {{ userData.dateOfBirth }}</p>
+    <p>Gender: {{ userData.slGender }}</p>
+    <p>Email: {{ userData.email }}</p>
+    <p>Address: {{ userData.address }}</p>
+    <p>Description: {{ userData.description }}</p>
+</div>

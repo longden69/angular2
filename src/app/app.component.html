@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container-fluid">
+  <div class="container">
+    <div style="text-align:center">
+      <h1>This is header !</h1>
+      <div>
+        <ul class="nav nav-pills">
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/register">Register</a></li>
+          <li><a routerLink="/list-user">List user</a></li>
+          <li><a routerLink="/highlight">Highligt</a></li>
+          <li><a routerLink="/login">Login</a></li>
+        </ul>
+      </div>
+    </div>
+    <app-user-detail [userData]="userData"></app-user-detail>
+    <router-outlet></router-outlet>
+    <!--<app-user-register (onSubmitForm)="onEmitData($event)"></app-user-register>-->
+    <div style="text-align:center">
+      <h1>This is footer</h1>
+    </div>
+  </div>
+</div>

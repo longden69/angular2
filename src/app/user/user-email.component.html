@@ -1,0 +1,19 @@
+<div>
+    <h1>Hôm nay là: {{ timeNow | timeFormat }}</h1>
+    <h1>123....</h1>
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+        <div class="form-group">
+            <label>Input: </label>
+            <input type="text" class="form-control" required [appValidateEqual]="prefix" name="email" [(ngModel)]="user.email">
+            <div class="alert alert-danger" *ngIf="userForm.controls?.email?.errors && ( userForm.controls.email?.dirty || userForm.controls.email?.touched )">
+                <div [hidden]="!userForm.controls.email?.errors.required">
+                    String is required
+                </div>
+                <div [hidden]="userForm.controls.email?.errors.valid || !!userForm.controls.email?.errors.required">
+                    Prefix must be '123'!
+                </div>
+            </div>
+        </div>
+        <button type="submit" (click)="kakka(userForm)" class="btn btn-primary">Submit</button>
+    </form>
+</div>
