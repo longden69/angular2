@@ -1,0 +1,32 @@
+<div>
+    <h1>Todo list</h1>
+    <button class="btn btn-sm btn-primary" (click)="todoAddVisible = !todoAddVisible">
+        <span class="text-capitalize">{{(todoAddVisible) ? 'x close form' : '+ add todo' }}</span>
+    </button>
+    <div *ngIf="todoAddVisible">
+        <app-todo-add (reload)="ngOnInit()"></app-todo-add>
+    </div>
+    <br>
+    <br>
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th><span class="text-capitalize">id</span></th>
+                <th><span class="text-capitalize">create at</span></th>
+                <th><span class="text-capitalize">name</span></th>
+                <th><span class="text-capitalize">status</span></th>
+                <th colspan="2"><span class="text-capitalize">action</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let todo of todoList">
+                <td>{{ todo.id }}</td>
+                <td>{{ todo.createdAt }}</td>
+                <td>{{ todo.name }}</td>
+                <td>{{ (todo.status) ? 'in progress' : 'done' }}</td>
+                <td><a [routerLink]="['/todo-edit', todo.id]">edit</a></td>
+                <td><button (click)="onDelete(todo.id)" >x</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

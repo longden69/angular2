@@ -1,23 +1,51 @@
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p translate>HELLO</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template>
+
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container-fluid">
   <div class="container">
     <div style="text-align:center">
-      <h1>This is header !</h1>
+      <h1 translate>HEADER</h1>
+      <div translate>HELLO</div>
+      <form #formLanguage="ngForm" class="form-inline">
+        <select class="form-control" #slLang name="lang" [(ngModel)]="slLang.language" (change)="onSwitchLang(formLanguage.value)">
+          <option value="en">en</option>
+          <option selected value="vi">vi</option>
+        </select>
+      </form>
       <div>
-        <ul class="nav nav-pills">
-          <li><a routerLink="/">Home</a></li>
-          <li><a routerLink="/register">Register</a></li>
-          <li><a routerLink="/list-user">List user</a></li>
-          <li><a routerLink="/highlight">Highligt</a></li>
-          <li><a routerLink="/login">Login</a></li>
+        <h1 translate>FEEDBACK</h1>
+      </div>
+      <div>
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link active" routerLink="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/register">Register</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/list-user">List user</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/highlight">Highligt</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/login">Login</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/popup">Modal</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/todo-list">Todo list</a></li>
         </ul>
       </div>
     </div>
     <app-user-detail [userData]="userData"></app-user-detail>
     <router-outlet></router-outlet>
+    <app-test></app-test>
     <!--<app-user-register (onSubmitForm)="onEmitData($event)"></app-user-register>-->
     <div style="text-align:center">
-      <h1>This is footer</h1>
+      <h1 translate>FOOTER</h1>
     </div>
   </div>
 </div>

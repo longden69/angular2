@@ -6,8 +6,12 @@ import { HighLightComponent } from './user/high-light.component';
 import { UserRegisterComponent } from './user/user-register.component';
 import { NotFoundComponent } from './user/not-found.component';
 import { AdminLoginComponent } from './admin/admin-login.component';
+import { TestBootstrapComponent } from './testbootstrap/test-bootstrap.component';
+import { ModalCustomclassComponent } from './testbootstrap/modal-customclass.component';
+import { TodoListComponent } from './todo/todo-list.component';
+import { TodoEditComponent } from './todo/todo-edit.component';
 import { UserGuard } from './guards/user.guard';
-import {RoleGuard} from './services/role.guard';
+import {RoleGuard} from './guards/role.guard';
 
 const routing: Routes = [
   {
@@ -34,6 +38,22 @@ const routing: Routes = [
   {
     path: 'login',
     component: AdminLoginComponent
+  },
+  {
+    path: 'popup',
+    component: TestBootstrapComponent
+  },
+  {
+    path: 'modalauth',
+    component: ModalCustomclassComponent
+  },
+  {
+    path: 'todo-list',
+    component: TodoListComponent
+  },
+  {
+    path: 'todo-edit/:id',
+    component: TodoEditComponent
   },
   {
     path: '**',

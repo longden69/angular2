@@ -1,0 +1,8 @@
+{
+  "HELLO": "Xin chào !",
+  "ANGULAR-INTRO": "Angular là một nền tảng giúp dễ dàng tạo các ứng dụng với web. Angular kết hợp các mẫu khai báo, tiêm phụ thuộc, công cụ kết thúc và kết hợp các phương pháp tốt nhất để giải quyết các thách thức phát triển. Angular cho phép các nhà phát triển xây dựng các ứng dụng hoạt động trên web, điện thoại di động hoặc máy tính để bàn",
+  "FEEDBACK": "Phản hồi",
+  "HEADER": "Đây là tiêu đề trang !",
+  "FOOTER": "Đây là phần cuối trang !",
+  "HELLO2": "Xin chào !"
+}

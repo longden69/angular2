@@ -1,0 +1,14 @@
+<div>
+    <h3><span class="text-capitalize">add todo</span></h3>
+    <form class="form" #addForm="ngForm" (ngSubmit)="onAddTodo()">
+        <div class="row form-group">
+            <label class="col-2"><span class="text-capitalize">todo name</span></label>
+            <div class="col-10">
+                <input type="text" class="form-control" name="todoName" [(ngModel)]="todo.name">
+            </div>
+        </div>
+        <div class="row form-group justify-content-md-center">
+            <button type="submit" class="btn btn-primary"><span class="text-capitalize">add</span></button>
+        </div>
+    </form>
+</div>
