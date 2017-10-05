@@ -11,6 +11,7 @@ import { TestService } from './test.service';
 
 export class TestComponent implements OnInit {
 	keyCard: string;
+	test = 'abc';
 	constructor(private testService: TestService ) {}
 
 	ngOnInit() {
