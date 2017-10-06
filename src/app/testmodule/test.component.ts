@@ -11,7 +11,7 @@ import { TestService } from './test.service';
 
 export class TestComponent implements OnInit {
 	keyCard: string;
-	test = 'abc';
+	test = /^123/i;
 	constructor(private testService: TestService ) {}
 
 	ngOnInit() {
