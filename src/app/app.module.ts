@@ -49,7 +49,6 @@ export function createTranslateLoader(http: HttpClient) {
     UserDetailComponent,
     HighLightComponent,
     UserListComponent,
-    UserEmailComponent,
     NotFoundComponent,
     AdminLoginComponent,
     TestBootstrapComponent,
@@ -58,9 +57,7 @@ export function createTranslateLoader(http: HttpClient) {
     TodoEditComponent,
     TodoAddComponent,
     HideStrPipe,
-    TimeFormatPipe,
-    HightlightDirective,
-    ValidateEmailDirective,
+    HightlightDirective
   ],
   imports: [
     BrowserModule,
